@@ -13,9 +13,12 @@ import { Events } from 'ionic-angular';
 */
 @Injectable()
 export class MyData {
+  public loaded: any = false; 
   XMLstring: string;
   public XMLdata: any;
   Parser : any;
+  
+  actRECS: string = 'Consonants'; 
     
   constructor(public http: Http, public events: Events) {
     console.log('Hello MyData Provider constructor');
@@ -38,7 +41,7 @@ export class MyData {
        this.Parser = new (window as any).DOMParser();
        this.XMLdata = this.Parser.parseFromString(this.XMLstring, "text/xml");
        console.dir(this.XMLdata);
-       
+       this.loaded = true;   // mame nacteno
        //
        this.events.publish('data:loaded', 'Data', Date.now());
        });

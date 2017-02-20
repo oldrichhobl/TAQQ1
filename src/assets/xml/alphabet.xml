@@ -116,12 +116,12 @@
 	
 	
 	
-	<RECS name="Nadepsana"> <!-- 3 druhy nadepsanych pismen  -->
+	<RECS name="Nadepsaná"> <!-- 3 druhy nadepsanych pismen  -->
 		<R w="KA"   s="ka"   tc="KA"     >&#x0F40;</R>
 		<R w="RA"   s="ra"   tc="KA"     >&#x0F62;</R>
 		<R w="LA"   s="la"   tc="KA"     >&#x0F63;</R>
 	</RECS>
-	<RECS name="NadepsanaRA"> <!-- 12 souhlasek nadepsanych pismenem ra  -->
+	<RECS name="Nadepsaná RA"> <!-- 12 souhlasek nadepsanych pismenem ra  -->
 	  <Tnadpis>ར་མགོ་བཅུ་གཉིས་ནི </Tnadpis>
 		<R w="rka"   s=""   tc="KA"     >རྐ</R>
 		<R w="rga"   s=""   tc="KA"     >རྒ</R>
@@ -136,7 +136,7 @@
 		<R w="rtsa"   s=""   tc="KA"    >རྩ</R>
 		<R w="rdza"   s=""   tc="KA"    >རྫ</R>
 	</RECS>
-	<RECS name="NadepsanaLA"> <!-- 10 souhlasek nadepsanych pismenem LA  -->
+	<RECS name="Nadepsaná LA"> <!-- 10 souhlasek nadepsanych pismenem LA  -->
 		<R w="KA"   s="ka"   tc="KA"     >&#x0F40;</R>
 		<R w="RA"   s="ra"   tc="KA"     >&#x0F62;</R>
 		<R w="LA"   s="la"   tc="KA"     >&#x0F63;</R>

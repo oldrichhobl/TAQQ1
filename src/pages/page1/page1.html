@@ -3,13 +3,11 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Page One</ion-title>
+    <ion-title>{{headtext}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
-  <button ion-button secondary  (click)="presentModal()">Modal</button>
     <ion-list>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
       <!-- <ion-icon [name]="item.icon" item-left></ion-icon>  -->

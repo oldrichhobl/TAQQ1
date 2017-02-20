@@ -15,6 +15,7 @@ import { Events } from 'ionic-angular';
 export class Page1 {
   myD:string = 'SSSSS';
   message = "XxX ";
+  headtext = "Page 1";
   
   selectedItem: any;
   icons: string[];
@@ -24,9 +25,8 @@ export class Page1 {
   constructor(public navCtrl: NavController, private myData: MyData, 
               public events: Events, public alertCtrl: AlertController,
               public modalCtrl: ModalController) {
-    console.log("Constructor PAGE1.TS");
-    // myData.loadXML();
-    // myD = myData;
+    console.log("CONSTRUCTOR PAGE1.TS " + myData.actRECS);
+    console.dir(navCtrl);
     
    // Let's populate this page with some filler content for funzies
     this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
@@ -34,17 +34,26 @@ export class Page1 {
     
     this.items = [];
     // this.selectNode('//RECS/R');
-  }
+  };
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad Page1');
-    // data nactem az po udalosti
+    // data nactem az po udalosti  data:loaded
     // second page (listen for the user created event)
     this.events.subscribe('data:loaded', (user, time) => {
     // user and time are the same arguments passed in `events.publish(user, time)`
     console.log('1 DATA LOADED event', user, 'at', time);
     // ted konecne nactem
-    this.selectNode('//RECS/R');
+    this.selectNode('//RECS[1]/R');
     });   
+    //
+    // pokud uz je nacteno vezmem data z XML
+    if(this.myData.loaded)
+      {
+         this.headtext = this.myData.actRECS;
+         var s = '//RECS[@name="' + this.myData.actRECS + '"]/R';
+         this.selectNode(s);     
+      }
   }
 
   showChar(index)
@@ -80,9 +89,10 @@ export class Page1 {
   itemTapped(event, item) {
     console.log("itemTapped page1 " + item);
     console.dir(item);
-    // this.showAlert(item);
-    this.presentModal(item)
-  };
+    this.navCtrl.push(ModalPage, {
+      item: item
+     });
+     }; 
   
   showAlert(item) {
     let alert = this.alertCtrl.create({

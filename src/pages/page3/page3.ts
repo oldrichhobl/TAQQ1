@@ -70,7 +70,7 @@ export class Page3 {
     console.log(this.headname);  
   }
   
-    itemTapped(event, item) {
+  itemTapped(event, item) {
     console.log("itemTapped page3 " + item);
     console.dir(item);
     // That's right, we're pushing to ourselves!
