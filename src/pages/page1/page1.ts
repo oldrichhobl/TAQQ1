@@ -19,7 +19,7 @@ export class Page1 {
   
   selectedItem: any;
   icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
+  items: Array<{title: string, sound: string, note: string, icon: string}>;
 
 
   constructor(public navCtrl: NavController, private myData: MyData, 
@@ -76,6 +76,7 @@ export class Page1 {
     while (actualSpan) {
       this.items.push({
         note: actualSpan.attributes['w'].value,
+        sound:actualSpan.attributes['s'].value,
         title: actualSpan.innerHTML,
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });

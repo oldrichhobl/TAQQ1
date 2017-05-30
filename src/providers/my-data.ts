@@ -12,8 +12,7 @@ import { Events } from 'ionic-angular';
   for more info on providers and Angular 2 DI.
 */
 @Injectable()
-export class MyData {
-  public loaded: any = false; 
+export class MyData {public loaded: any = false; 
   XMLstring: string;
   public XMLdata: any;
   Parser : any;
@@ -34,7 +33,7 @@ export class MyData {
        this.XMLstring = res.text();
        
        if (typeof (window as any).DOMParser != "undefined") {
-         console.log("DOMParser neni undefined !!!!!");
+         console.log(" OK DOMParser neni undefined !!!!!");
          }
 
        // domparser

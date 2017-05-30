@@ -9,7 +9,7 @@ import { NavController, NavParams } from 'ionic-angular';
 export class Page2 {
   selectedItem: any;
   icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
+  items: Array<{title: string, sound: string, note: string, icon: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
@@ -23,6 +23,7 @@ export class Page2 {
     for (let i = 1; i < 11; i++) {
       this.items.push({
         title: 'Item ' + i,
+        sound:  'a',
         note: 'This is item #' + i,
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });

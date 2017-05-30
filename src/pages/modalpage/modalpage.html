@@ -5,10 +5,29 @@
   Ionic pages and navigation.
 -->
 
-<ion-content padding>
+<ion-content padding  (swipe)="ok()">
+ 
   <div class="znak" >
   {{item.title}}
   </div>
-  
-  <button secondary (click)="ok()">OK</button>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+    <button ion-button icon-left  (click)="audioplay()"> 
+       <ion-icon name='play'></ion-icon> 
+     </button> 
+    </ion-col>
+    <ion-col>
+    <button ion-button outline icon-left (click)="ok()" > 
+       <ion-icon name='home' ></ion-icon> 
+     </button> 
+    </ion-col>
+    <ion-col>
+     <button ion-button outline icon-left> 
+       <ion-icon name='beer' ></ion-icon> 
+     </button> 
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
 </ion-content>

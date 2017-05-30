@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ViewController} from 'ionic-angular';
+import { NativeAudio } from '@ionic-native/native-audio';
+
 
 /*
   Generated class for the ModalPage page.
@@ -14,12 +16,15 @@ import { NavController, NavParams, ViewController} from 'ionic-angular';
 export class ModalPage {
 
   item: any;
+  file: any;
+  nativeAudio: NativeAudio;
 
   constructor(public navCtrl: NavController,
-              private view: ViewController,
+              public view: ViewController,
               public navParams: NavParams)
   {
     this.item = navParams.get('item');
+
   }
 
   ionViewDidLoad() {
@@ -27,6 +32,25 @@ export class ModalPage {
     console.dir(this.navParams);
     // this.item.title = this.navParams.data.item.title;
   }
+
+  audioplay() {
+  	var pathalone = 'assets/sounds/' +
+  	                 this.item.sound + '.wma.mp3';
+  	console.log("AUDIOPLAY " + pathalone);
+  	
+    this.nativeAudio = new NativeAudio();
+    this.nativeAudio.preloadSimple('uniqueId1', 
+	             pathalone).then(()=>{
+	             	console.log("SUCCESS");
+	             	this.nativeAudio.play('uniqueId1',
+	             		()=>{this.nativeAudio.unload('uniqueId1')}
+	             		)
+	                 },
+	                 ()=>{console.log("ERROR")});
+  }
+
+
+
 
   ok() {
     this.view.dismiss()
