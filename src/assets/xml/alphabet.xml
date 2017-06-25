@@ -67,10 +67,10 @@
 	</RECS>
 	
 	<RECS name="Vowels"> <!-- 4 samohlasky  -->
-		<R w="i"   s="i"   tc="i"     >&#xF300;</R>
-		<R w="e"   s="e"   tc="e"     >&#xF303;</R>
-		<R w="u"   s="u"   tc="u"     >&#xF302;</R>
-		<R w="o"   s="o"   tc="o"     >&#xF304;</R>
+		<R w="i-"   s="i-i"   tc="i"     >&#x0F68;&#x0F72;</R>
+		<R w="e-"   s="e-e"   tc="e"     >&#x0F68;&#x0F7A;</R>
+		<R w="u-"   s="u-u"   tc="u"     >&#x0F68;&#x0F74;</R>
+		<R w="o-"   s="o-o"   tc="o"     >&#x0F68;&#x0F7C;</R>
 	</RECS>
 	
 	<!-- Tibetan consonants with the four vowel signs -->
@@ -121,6 +121,7 @@
 		<R w="RA"   s="ra"   tc="KA"     >&#x0F62;</R>
 		<R w="LA"   s="la"   tc="KA"     >&#x0F63;</R>
 	</RECS>
+	
 	<RECS name="Nadepsaná RA"> <!-- 12 souhlasek nadepsanych pismenem ra  -->
 	  <Tnadpis>ར་མགོ་བཅུ་གཉིས་ནི </Tnadpis>
 		<R w="rka"   s=""   tc="KA"     >རྐ</R>
@@ -137,7 +138,7 @@
 		<R w="rdza"   s=""   tc="KA"    >རྫ</R>
 	</RECS>
 	<RECS name="Nadepsaná LA"> <!-- 10 souhlasek nadepsanych pismenem LA  -->
-		<R w="KA"   s="ka"   tc="KA"     >&#x0F40;</R>
+		<R w="KA"   s="ka"   tc="KA"     >&#x0F40;&#x0F8B;</R>   <!-- 2017-06-25 -->
 		<R w="RA"   s="ra"   tc="KA"     >&#x0F62;</R>
 		<R w="LA"   s="la"   tc="KA"     >&#x0F63;</R>
 		<R w="KA"   s="ka"   tc="KA"     >&#x0F40;</R>
